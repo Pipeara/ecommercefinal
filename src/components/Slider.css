@@ -1,0 +1,38 @@
+.slider {
+    position: relative;
+    width: 100%; /* Ajusta el ancho segÃºn tus necesidades */
+    height: 300px; /* Ajusta la altura segÃºn tus necesidades */
+    overflow: hidden;
+    margin: 0 auto 0 600px; /* Ajusta el margen derecho segÃºn tus necesidades */
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slides img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5); /* Cambia el color del fondo si es necesario */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  

@@ -1,0 +1,67 @@
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.login-container h2 {
+  margin-bottom: 30px; /* Aumentado el margen inferior para separar más el título */
+  text-align: center;
+  font-size: 24px; /* Aumentado el tamaño del título */
+  color: #333; /* Cambiado el color del título para hacerlo más visible */
+}
+
+.login-form .form-group {
+  margin-bottom: 20px; /* Aumentado el espacio entre los elementos del formulario */
+}
+
+.login-form label {
+  display: block;
+  font-weight: bold;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%; /* Cambiado el ancho de los campos de entrada al 100% */
+  padding: 12px; /* Aumentado el relleno de los campos de entrada */
+  font-size: 16px;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-login {
+  width: 100%; /* Cambiado el ancho del botón al 100% */
+  padding: 12px; /* Aumentado el relleno del botón */
+  font-size: 18px; /* Aumentado el tamaño del texto del botón */
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,49 @@
+.Home {
+  background-color: #fff; /* Color de fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px; /* Espaciado interno */
+  overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+  transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+}
+
+.Home:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el mouse */
+}
+
+.home-content {
+  text-align: center; /* Centra el contenido */
+}
+.home-content h2 {
+  margin-bottom: 10px; /* Espaciado inferior para el título */
+  color: #12cdee; /* Color de texto más oscuro */
+  font-size: 2rem; /* Tamaño de fuente más grande */
+}
+
+.home-content h4 {
+  margin-bottom: 20px; /* Espaciado inferior para el subtítulo */
+  color: #13d9ef; /* Color de texto más oscuro */
+  font-size: 1.5rem; /* Tamaño de fuente más grande */
+}
+
+
+
+.Home button {
+  background-color: #c5cad0; /* Color de fondo azul */
+  color: #4572ef; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de apuntar */
+  transition: background-color 0.3s ease; /* Transición suave de color de fondo */
+}
+
+.Home button svg {
+  vertical-align: middle; /* Alinear verticalmente el icono */
+  margin-left: 5px; /* Espaciado a la izquierda del icono */
+}
+
+.Home button:hover {
+  background-color: #dae1e8; /* Color de fondo más oscuro al pasar el mouse */
+}

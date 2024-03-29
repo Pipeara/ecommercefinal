@@ -1,0 +1,10 @@
+/* Estilo predeterminado para la descripción */
+.menu-description {
+    font-size: 16px; /* Tamaño de fuente predeterminado */
+  }
+  
+  /* Estilo alternativo para descripciones largas */
+  .menu-description-large {
+    font-size: 18px; /* Tamaño de fuente más grande */
+  }
+  

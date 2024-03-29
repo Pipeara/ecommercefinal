@@ -1,0 +1,41 @@
+.admin-container {
+  margin-top: 20px;
+}
+
+.admin-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  margin: 0 auto; /* Centra la tabla horizontalmente */
+  width: 80%; /* Ancho de la tabla */
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th, .users-table td {
+  border: 1px solid #666161;
+  padding: 8px;
+  text-align: left;
+}
+
+.users-table th {
+  background-color: hsl(0, 4%, 37%);
+}
+
+.users-table tr:nth-child(even) {
+  background-color: #545151;
+}
+
+.users-table tr:hover {
+  background-color: #ddd;
+}
+
+.back-link-container {
+  margin-top: 20px;
+  text-align: center;
+}
