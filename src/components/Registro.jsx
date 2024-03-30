@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 import './Registro.css';
 
