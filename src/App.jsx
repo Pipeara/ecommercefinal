@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import About from './components/About';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -19,41 +19,37 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = () => {
-    setIsLoggedIn(false);
+    setIsLoggedIn(true);
   };
 
   const handleLogout = () => {
     setIsLoggedIn(false);
   };
+
   return (
     <PizzaProvider>
-      <BrowserRouter>
+      <Router>
         <Header isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/menu" element={isLoggedIn ? <Menu /> : <Navigate to="/login" />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/registro" element={<Registro />} />
-          <Route path="/login" element={<Login handleLogin={handleLogin} />} />
-          <Route path="/loginAdmin" element={<LoginAdmin handleLogin={handleLogin} />} />
+          <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path="/loginAdmin" element={<LoginAdmin setIsLoggedIn={setIsLoggedIn} />} />
           {/* Redirige a AdminUser si está autenticado */}
-          {isLoggedIn && <Navigate to="/AdminUser" />}
-          {/* Si no está autenticado, redirige a la página de inicio de sesión */}
-         
+          {isLoggedIn && <Route path="/AdminUser" element={<AdminUser />} />}
           {/* Rutas específicas para AdminUser */}
-          <Route path="/AdminUser" element={<AdminUser />} />
           <Route path="/admin/users" element={<AdminUser />} />
           {/* Agregamos la ruta para redirigir a la página de administrador */}
           <Route path="/admin" element={<Admin />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
       <Footer />
     </PizzaProvider>
   );
-  
-
 };
 
 export default App;

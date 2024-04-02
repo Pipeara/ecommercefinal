@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 
-function Login({ setIsLoggedIn }) { // Asegúrate de recibir setIsLoggedIn como una prop
+function Login({ setIsLoggedIn }) { 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [alerta, setAlerta] = useState(false);
@@ -15,7 +15,7 @@ function Login({ setIsLoggedIn }) { // Asegúrate de recibir setIsLoggedIn como 
   
     // URL y endpoint del servidor de autenticación
     const urlServer = "https://restoback-2.onrender.com";
-    const endpoint = "/usuarios";
+    const endpoint = "/login"; // Corregido el endpoint a '/login'
 
     // Credenciales del usuario
     const usuario = { email, password };
@@ -39,7 +39,7 @@ function Login({ setIsLoggedIn }) { // Asegúrate de recibir setIsLoggedIn como 
         const data = await response.json();
 
         // Verificar si el usuario está en la base de datos
-        if (data.existe) {
+        if (data.message === 'Autenticación exitosa') { // Corregido para verificar el mensaje de respuesta
           // Indicar que el usuario ha iniciado sesión
           setIsLoggedIn(true);
           // Redirigir al usuario a la página de menú
@@ -61,7 +61,8 @@ function Login({ setIsLoggedIn }) { // Asegúrate de recibir setIsLoggedIn como 
 
   return (
     <div className="login-container"> 
-      <h2>Login</h2>
+      <h2>Login, tiene que autentificarse para ver menu</h2>
+      <h3>tiene que autentificarse para ver menu</h3>
       <form onSubmit={handleLogin}>
         <div className="form-group"> 
           <label htmlFor="email">Email:</label>
